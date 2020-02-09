@@ -1,0 +1,148 @@
+.hero {
+    background-image: url(../img/bg/fpbg.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+}
+
+.header {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.header__logo {
+    margin-right: auto;
+}
+
+.nav {
+    margin-right: rem(15px);
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+}
+
+.nav__item {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    &:after {
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
+        @include circle(5px,#fff);
+        margin:0 12px;
+    }
+    &:last-child:after {
+        display: none;
+    }
+}
+
+.nav__link {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.42;
+    text-decoration: none;
+    text-transform:uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    transition: .5s;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.hero__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__content {
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    flex-grow: 1;
+    align-items: center;
+    // padding-bottom: 15%;
+    margin-bottom: 5%;
+}
+
+.hero__img, .hero__description {
+    flex-basis:50%;
+    display: flex;
+}
+
+.hero__description {
+    flex-direction:column;
+    justify-content: center;
+}
+
+.section__title {
+    color:#f9b43b;
+    font-family: 'Gagalin';
+    font-size: rem(72px);
+    font-weight: 300;
+    line-height: 1.42;
+    margin: 0;
+    padding-top:60px;
+}
+
+.hero__description-text {
+    color:#fff;
+    font-family: 'Lifehack';
+    font-size:rem(65px);
+    font-weight:400;
+    line-height:1;
+}
+.hero__arrow{
+    margin-bottom: 5%;
+}
+.hero__arrow-link {
+}
+.hero__arrow-img {
+}
+
+
+
+
+
+
+// .manu__item {
+//     display: inline-block;
+//     position: relative;
+//     width: 100px;
+//     height: 30px;
+//     background-color: black;
+// }
+
+// .menu__link {
+//     width: 100%;
+//     display: inline-block;
+//     text-align:center; 
+//     text-decoration: none;
+//     line-height: 30px;
+// }
+
+// .manu__circle {
+//     display: inline-block;
+//     vertical-align: middle;
+//     white-space: nowrap;
+//     &:after {
+//         display: inline-block;
+//         content: "";
+//         @include circle(5px,#fff);
+//     }
+// }
+
+// .manu__link:hover {
+//     cursor: pointer;
+// }

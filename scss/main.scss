@@ -1,0 +1,15 @@
+//config
+
+@import "config/_variables.scss";
+@import "config/_mixins.scss";
+
+//base
+@import "layout/_fonts";
+@import "layout/_base.scss";
+@import "layout/_adjustment.scss";
+
+//section
+@import "sections/_review.scss";
+@import "sections/_hero.scss";
+@import "sections/_best.scss";
+

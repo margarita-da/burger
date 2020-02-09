@@ -1,0 +1,26 @@
+body {
+    margin:0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    color: $dark;
+    line-height:1.42;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscle;
+    position: relative;
+}
+
+*, *::before , *::after {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
