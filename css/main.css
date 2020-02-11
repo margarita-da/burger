@@ -447,4 +447,137 @@ ul {
   text-align: center;
   margin: 1.25rem 0 0 0;
 }
+
+.crew {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bg/crewbg.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+
+.crew__accordeon {
+  width: 540px;
+  height: 100%;
+  margin-left: auto;
+  background-color: rgba(47, 50, 51, 0.93);
+  color: white;
+  padding-left: 50px;
+  padding-top: 100px;
+  padding-right: 20px;
+}
+
+.crew__accordeon-title {
+  margin-bottom: 30px;
+  font-size: 4.5rem;
+  color: #f8b43a;
+  font-family: 'Gagalin';
+  line-height: 1.42;
+}
+
+.crew__accordeon-hidden {
+  margin-top: 10px;
+  height: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.crew__accordeon-itemname {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.crew__accordeon-item {
+  margin-bottom: 35px;
+  cursor: pointer;
+}
+
+.crew__accordeon-item:active .crew__accordeon-hidden {
+  overflow: visible;
+  height: auto;
+}
+
+.crew__accordeon-item:active .crew__accordeon-name {
+  color: #f8b43a;
+}
+
+.crew__accordeon-item:active .crew__accordeon-svg {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.crew__accordeon-wrimg {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+
+.crew__accordeon-hidden-img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.crew__accordeon-svg {
+  fill: #f9b43b;
+  margin-right: 8px;
+}
+
+.crew__accordeon-name {
+  font-family: 'Gagalin';
+  font-size: 14px;
+}
+
+.crew__accordeon-hidden-txtblock {
+  width: calc(100% - 95px);
+  line-height: 1.42;
+  font-family: 'Ubuntu';
+}
+
+.crew__accordeon-hidden-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.crew__accordeon-hidden-description {
+  font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+}
 /*# sourceMappingURL=main.css.map */

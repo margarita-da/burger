@@ -1,0 +1,91 @@
+.crew {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/bg/crewbg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.crew__accordeon {
+    width: 540px;
+    height: 100%;
+    margin-left: auto;
+    background-color: rgba(#2f3233, 0.93);
+    color: white;
+    padding-left:50px;
+    padding-top: 100px;
+    padding-right: 20px;
+}
+
+.crew__accordeon-title {
+    margin-bottom: 30px;
+    font-size: rem(72px);
+    color: $yellow;
+    font-family: 'Gagalin';
+    line-height: 1.42;
+}
+
+.crew__accordeon-hidden {
+    margin-top: 10px;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.crew__accordeon-itemname {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.crew__accordeon-item {
+    margin-bottom: 35px;
+    cursor: pointer;
+    &:active .crew__accordeon-hidden {
+    overflow: visible;
+    height: auto;
+    }
+    &:active .crew__accordeon-name {
+        color: $yellow;
+    }
+    &:active .crew__accordeon-svg {
+        transform: scale(1, -1)
+    }
+}
+.crew__accordeon-wrimg{
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+.crew__accordeon-hidden-img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.crew__accordeon-svg {
+    fill:rgb(249, 180, 59);
+    margin-right: 8px;
+}
+.crew__accordeon-name {
+    font-family: 'Gagalin';
+    font-size: 14px;
+    
+}
+.crew__accordeon-hidden-txtblock {
+    width: calc(100% - 95px);
+    line-height: 1.42;
+    font-family: 'Ubuntu';
+}
+
+.crew__accordeon-hidden-title {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.crew__accordeon-hidden-description {
+    font-weight: 300;
+}
