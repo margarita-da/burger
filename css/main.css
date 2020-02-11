@@ -509,15 +509,21 @@ ul {
 .crew__accordeon-item:active .crew__accordeon-hidden {
   overflow: visible;
   height: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .crew__accordeon-item:active .crew__accordeon-name {
   color: #f8b43a;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .crew__accordeon-item:active .crew__accordeon-svg {
   -webkit-transform: scale(1, -1);
           transform: scale(1, -1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .crew__accordeon-wrimg {
@@ -598,10 +604,14 @@ ul {
   overflow: visible;
   height: 100%;
   width: 540px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .menu__accordeon-list:active .section__menu-accordeontitle {
   color: #f8b43a;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .menu__accordeon-hidden {
@@ -654,6 +664,78 @@ ul {
   text-align: center;
   color: white;
   background-color: rgba(20, 20, 20, 0.7);
+}
+
+.contacts {
+  background-image: url(../img/bg/mapbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 70px 0 70px;
+  bottom: 0;
+}
+
+.footer__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+}
+
+.footer__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.footer__right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer__socials {
+  width: 22px;
+  height: 22px;
+  margin-left: 15px;
+}
+
+.footer__svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.footer__svg:active {
+  opacity: 1;
 }
 
 @media (max-width: 1200px) {

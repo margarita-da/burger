@@ -32,9 +32,11 @@
         overflow: visible;
         height: 100%;
         width: 540px;
+        transition: 0.5s;
     }
     &:active .section__menu-accordeontitle {
         color: $yellow;
+        transition: 0.5s;
     }
   }
 

@@ -46,12 +46,15 @@
     &:active .crew__accordeon-hidden {
     overflow: visible;
     height: auto;
+    transition: 0.5s;
     }
     &:active .crew__accordeon-name {
         color: $yellow;
+        transition: 0.5s;
     }
     &:active .crew__accordeon-svg {
-        transform: scale(1, -1)
+        transform: scale(1, -1);
+        transition:0.5s ;
     }
 }
 .crew__accordeon-wrimg{
