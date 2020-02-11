@@ -470,7 +470,7 @@ ul {
 
 .crew__accordeon-title {
   margin-bottom: 30px;
-  font-size: 4.5rem;
+  font-size: 72px;
   color: #f8b43a;
   font-family: 'Gagalin';
   line-height: 1.42;
@@ -555,6 +555,105 @@ ul {
 
 .crew__accordeon-hidden-description {
   font-weight: 300;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bg/menubg.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section__menu-title {
+  color: white;
+  margin: 90px 0 0 90px;
+  padding: 0;
+}
+
+.menu__accordeon {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+.menu__accordeon-list {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.menu__accordeon-list:active .menu__accordeon-hidden {
+  overflow: visible;
+  height: 100%;
+  width: 540px;
+}
+
+.menu__accordeon-list:active .section__menu-accordeontitle {
+  color: #f8b43a;
+}
+
+.menu__accordeon-hidden {
+  width: 0;
+  overflow: hidden;
+  background-color: rgba(46, 49, 51, 0.9);
+}
+
+.menu__accordeon-hiddentxt {
+  color: white;
+  font-size: 14px;
+  font-family: 'Ubuntu';
+  padding: 40px 40px 0 40px;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.menu__accordeon-item {
+  width: 80px;
+  height: 100%;
+}
+
+.menu__accordeon-bgone {
+  background-image: url(../img/content/menumyaso.png);
+  background-repeat: no-repeat;
+}
+
+.menu__accordeon-bgtwo {
+  background-image: url(../img/content/menuvegan.png);
+  background-repeat: no-repeat;
+}
+
+.menu__accordeon-bgthree {
+  background-image: url(../img/content/menudiet.png);
+  background-repeat: no-repeat;
+}
+
+.section__menu-accordeontitle {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px 0 20px;
+  margin: 0;
+  line-height: 1;
+  font-size: 40px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  text-align: center;
+  color: white;
+  background-color: rgba(20, 20, 20, 0.7);
 }
 
 @media (max-width: 1200px) {
