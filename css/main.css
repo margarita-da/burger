@@ -697,6 +697,8 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
   width: 50%;
+  font-family: 'Ubuntu';
+  font-size: 14px;
 }
 
 .footer__phone {
@@ -734,8 +736,20 @@ ul {
   cursor: pointer;
 }
 
-.footer__svg:active {
+.footer__svg:hover {
   opacity: 1;
+}
+
+.footer__adress {
+  color: white;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.footer__phone-number {
+  color: #e45028;
+  font-weight: 700;
+  margin-left: 5px;
 }
 
 @media (max-width: 1200px) {
