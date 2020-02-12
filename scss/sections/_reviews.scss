@@ -1,34 +1,29 @@
-.reviews{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-.reviews__list {
+.review__list {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-wrap:wrap;
-    position: relative;
+    flex-wrap: wrap;
 }
 
-.reviews__item {
+.review__item {
     width: 25%;
     height: 50%;
+    filter:grayscale(100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     position: relative;
 
+    &:hover {
+        opacity: 1;
+    }
+
 }
-.reviews__wrap-pic {
-    width: 100%;
-    height: 100%;
-  
+
+.review__title {
+    color: white;
 }
-.reviews__pic {
-    filter: saturate(0%);
-    display: block;
-    width: 100%;
-    height: 100%;
-    
-}
+
 .reviews__popup {
     position: absolute;
     width: 100%;
