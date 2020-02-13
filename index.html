@@ -308,8 +308,8 @@
             </section>
 
             <section class="section order" id="form">
-                <div class="container">
-                    <h2 class="section__title">Закажите доставку</h2>
+                <div class="container ">
+                    <h2 class="section__title order__title">Закажите доставку</h2>
                     <form action="" class="form">
                         <div class="form__left">
                         <div class="form__row">
@@ -318,41 +318,68 @@
                                 <input type="text" name="" class="form__input">
                             </label>
                             <label class="form__block">
-                                <div class="form__title"> Имя</div>
+                                <div class="form__title"> Телефон</div>
+                                <input type="phone" name="" class="form__input">
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <label class="form__block">
+                                <div class="form__title"> Улица</div>
                                 <input type="text" name="" class="form__input">
                             </label>
                         </div>
                         <div class="form__row">
                             <label class="form__block">
-                                <div class="form__title"> Имя</div>
-                                <input type="text" name="" class="form__input">
-                            </label>
-                        </div>
-                        <div class="form__row">
-                            <label class="form__block">
-                                <div class="form__title"> Имя</div>
+                                <div class="form__title"> Дом</div>
                                 <input type="text" name="" class="form__input">
                             </label>
                             <label class="form__block">
-                                <div class="form__title"> Имя</div>
+                                <div class="form__title"> Корпус</div>
                                 <input type="text" name="" class="form__input">
                             </label>
                             <label class="form__block">
-                                <div class="form__title"> Имя</div>
+                                <div class="form__title"> Квартира</div>
                                 <input type="text" name="" class="form__input">
                             </label>
                             <label class="form__block">
-                                <div class="form__title"> Имя</div>
+                                <div class="form__title"> Этаж</div>
                                 <input type="text" name="" class="form__input">
                             </label>
                         </div>
                         </div>
                         <div class="form__right">
+                            <div class="form__right-row">
                             <label class="form__block">
-                                <div class="form__title"> Комментарий</div>
-                                <input type="text" name="" class="form__input">
-                                
+                                <div class="form__title form__title-com"> Комментарий</div>
+                                <textarea rows="6" type="text" name="" class="form__input form__input-com" >
+                                </textarea>
                             </label>
+                            </div>
+                        
+                            <div class="form__right-row form__right-radio">
+                                <label class="form__right-block">
+                                    <div class="form__title form__title-radio"> Потребуется сдача</div>
+                                    <input type="radio" name="dengi" class="form__input form__input-radio">
+                                </label>
+                                <label class="form__right-block">
+                                    <div class="form__title form__title-radio"> Оплата по карте</div>
+                                    <input type="radio" name="dengi" class="form__input form__input-radio">
+                                </label>
+                            </div>
+                            <div class="form__right-row">
+                                <label class="form__right-block">
+                                    <div class="form__title form__title-radio"> Не перезванивать</div>
+                                    <input type="checkbox" name="dengi" class="form__input form__input-radio">
+                                </label>
+                            </div>
+                            <div class="form__right-row form__right-rowbtn">
+                                <div class="form__btn">
+                                    <a href="#" class="order-link">Заказать</a>
+                                </div>
+                                <div class="form__emrty">
+                                    <a href="#" class="form__btn-emty">Очистить</a>
+                                </div>
+                             </div>
                         </div>
                     </form>
                 </div>

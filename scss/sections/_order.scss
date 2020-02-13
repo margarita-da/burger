@@ -4,19 +4,28 @@
     color: #ffffff;
 }
 
+.order__title {
+    margin: 50px 0 20px 0;
+}
+
 .form {
-    
     display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-family: 'Ubuntu';
+    font-weight: 300;
 }
 
 
 .form__row {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     display: flex;
 }
 
 .form__right{
     flex:1;
+    display: flex;
+    flex-direction: column;
 }
 .form__left{
     flex:1;
@@ -33,10 +42,57 @@
     }
 }
 
+.form__input-com{
+    resize: none;
+}
+
 .form__input {
     padding: 10px;
     background: #fff;
     border:none;
     border-radius:5px;
     width: 100%;
+    margin: 0;
+}
+
+.form__right-row {
+    display: flex;
+    margin-bottom: 15px;
+    // justify-content: flex-start;
+    &:last-child {
+    margin-bottom: 0;
+    }
+}
+
+.form__right-block {
+    display: flex;
+    align-items: center;
+    width: 160px;
+}
+
+
+.form__title{
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+.form__input-radio {
+    color:red;
+    order:1;
+    width: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.form__title-radio {
+    order:2;
+
+    // margin-right: 5px;
+}
+.form__right-rowbtn {
+    margin-top: 10px;
+}
+
+.form__btn-emty {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
 }
