@@ -54,13 +54,14 @@
     align-items: center;
     justify-content: center;
     margin-left: rem(20px);
-    width: 300px;
+    width: 32%;
     margin-bottom: rem(20px);
     &:first-child {
     margin-left: 0px;
     }
     @include phones {
         flex-direction:row;
+        width:300px;
     }
 }
 .best__item-logo {
@@ -89,6 +90,7 @@
     font-size: rem(14px);
     text-align: center;
     margin: rem(20px) 0 0 0;
+    // white-space: normal;
     @include laptop770 {
         font-size: rem(10px);
     }
