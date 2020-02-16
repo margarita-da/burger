@@ -113,18 +113,7 @@
         width: 100%;
         line-height: 1;
     }
-    .section__title {
-        @include desktop1050 {
-            padding-top: 0;
-            font-size: rem(52px) !important;
-        }
-        @include laptop770 {
-            font-size: rem(40px) !important;
-        }
-        @include phones {
-            font-size: rem(30px) !important;
-        }
-    }
+   
 }
 
 .section__title {
@@ -135,6 +124,16 @@
     line-height: 1.42;
     margin: 0;
     padding-top:60px;
+        @include desktop1050 {
+            padding-top: 0;
+            font-size: rem(52px) !important;
+        }
+        @include laptop770 {
+            font-size: rem(40px) !important;
+        }
+        @include phones {
+            font-size: rem(30px) !important;
+        }
 }
 
 .hero__description-text {

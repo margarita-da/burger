@@ -12,6 +12,10 @@
     color:white;
     margin:90px 0 0 90px;
     padding: 0;
+    @include laptop770 {
+      margin: 90px 0 0 20px;
+    }
+    
   }
 
   .menu__accordeon {
@@ -38,6 +42,7 @@
         color: $yellow;
         transition: 0.5s;
     }
+    
   }
 
   .menu__accordeon-hidden {
