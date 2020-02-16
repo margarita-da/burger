@@ -14,6 +14,13 @@ min-height: 650px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0 32px;
+    @include desktop {
+        width: 100%;
+    }
+    @include phones {
+        padding: 0 16px;
+    }
 }
 
 .section {

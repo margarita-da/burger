@@ -1,7 +1,10 @@
 .fixed-menu {
     position: fixed;
-    top: 90px;
+    top: 180px;
     right: 45px;
+    @include laptop770 {
+        display: none;
+    }
 }
 .fixed-menu__item {
     margin-bottom:2px;

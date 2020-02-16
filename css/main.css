@@ -93,6 +93,19 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0 32px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 .section {
@@ -143,17 +156,27 @@ ul {
   padding-top: 10px;
 }
 
-.header__logo {
-  margin-right: auto;
-}
-
 .nav {
-  margin-right: 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav__list {
-  margin: 0;
+  margin: 0 20px 0 0;
   padding: 0;
+}
+
+@media screen and (max-width: 770px) {
+  .nav__list {
+    display: none;
+  }
 }
 
 .nav__item {
@@ -240,7 +263,13 @@ ul {
 
 @media screen and (max-width: 1050px) {
   .hero_img {
-    width: 50%;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .hero_img {
+    width: 300px;
   }
 }
 
@@ -266,12 +295,14 @@ ul {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+    line-height: 1;
   }
 }
 
 @media screen and (max-width: 1050px) {
   .hero__description .section__title {
     padding-top: 0;
+    font-size: 3.25rem !important;
   }
 }
 
@@ -293,8 +324,38 @@ ul {
   line-height: 1;
 }
 
+@media screen and (max-width: 1050px) {
+  .hero__description-text {
+    font-size: 2.8125rem;
+  }
+}
+
 .hero__arrow {
   margin-bottom: 5%;
+}
+
+.header__mobile-menu {
+  width: 30px;
+  margin-left: 20px;
+  display: none;
+}
+
+@media screen and (max-width: 770px) {
+  .header__mobile-menu {
+    display: block;
+  }
+}
+
+.header__mobile-menu-item {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+.header__mobile-menu-item:first-child {
+  margin-top: 0;
 }
 
 .best {
@@ -903,8 +964,14 @@ ul {
 
 .fixed-menu {
   position: fixed;
-  top: 90px;
+  top: 180px;
   right: 45px;
+}
+
+@media screen and (max-width: 770px) {
+  .fixed-menu {
+    display: none;
+  }
 }
 
 .fixed-menu__item {
@@ -938,29 +1005,5 @@ ul {
 
 .fixed-menu__link:hover {
   border-color: #fff;
-}
-
-@media (max-width: 1200px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (max-width: 992px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    width: 480px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    width: 95%;
-  }
 }
 /*# sourceMappingURL=main.css.map */

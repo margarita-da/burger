@@ -26,6 +26,12 @@
 	}
 }
 
+@mixin laptop770 {
+	@media screen and (max-width: $laptop770){
+		@content;
+	}
+}
+
 @mixin tablets {
 	@media screen and (max-width: $tablets){
 		@content;
