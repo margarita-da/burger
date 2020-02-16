@@ -17,7 +17,11 @@
     &:hover {
         opacity: 1;
     }
-
+    @include laptop770 {
+        width: 50%;
+        // height: 60%;
+        background-position:top;
+    }
 }
 
 .review__title {
@@ -45,9 +49,10 @@
         cursor: pointer;
         transition: 0.5s;
         background-color: rgba(#454545,0.5) ;
-
     }
-
+    @include laptop770 {
+        align-items: center;
+    }
 }
 
 .reviews__popup__h2_title {
@@ -55,12 +60,28 @@
     font-family: "Gagalin";
     margin: 0 0 10px 0;
     font-weight: 400;
+    @include laptop770 {
+        line-height: 0;
+    }
+    @include phones {
+        font-size: rem(24px);
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 20px;
+  
+    }
 }
 .reviews__popup__descr {
     font-family: "Ubuntu"; 
     font-size: rem(14px);
     margin: 0 0 24px 0;
     font-weight: 300;
+    @include laptop770 {
+        margin-bottom: 10px;
+    }
+    @include phones {
+        display: none;
+    }
 }
 
 .reviews__popup__link {
