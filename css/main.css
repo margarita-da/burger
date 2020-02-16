@@ -413,7 +413,24 @@ ul {
   line-height: 0.75;
 }
 
+@media screen and (max-width: 770px) {
+  .section__title--best {
+    font-size: 3.125rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section__title--best {
+    font-size: 2.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 20px 0;
+  }
+}
+
 .best__list {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,6 +440,30 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .best__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .best__item-wraptxt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .best__list-item {
@@ -448,9 +489,24 @@ ul {
   margin-left: 0px;
 }
 
+@media screen and (max-width: 480px) {
+  .best__list-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .best__item-logo {
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .best__item-logo {
+    width: 60%;
+  }
 }
 
 .best__item-title {
@@ -460,11 +516,38 @@ ul {
   margin: 2.5rem 0 0 0;
 }
 
+@media screen and (max-width: 770px) {
+  .best__item-title {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .best__item-title {
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .best__item-description {
   font-family: 'Ubuntu';
   font-size: 0.875rem;
   text-align: center;
   margin: 1.25rem 0 0 0;
+}
+
+@media screen and (max-width: 770px) {
+  .best__item-description {
+    font-size: 0.625rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .best__item-description {
+    margin-top: 10px;
+  }
 }
 
 .crew {

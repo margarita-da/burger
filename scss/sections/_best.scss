@@ -20,14 +20,34 @@
     margin-bottom: rem(55px);
     margin-top: 0;
     line-height: 0.75;
+    @include laptop770 {
+        font-size: rem(50px);
+    }
+    @include phones {
+        font-size: rem(40px);
+        display: flex;
+        margin: 20px 0;
+    }
 }
 
 .best__list {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+    @include phones {
+        flex-direction: column;
+    }
+       
 }
+.best__item-wraptxt {
+    @include phones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .best__list-item {
     display: flex;
     flex-direction: column;
@@ -39,10 +59,16 @@
     &:first-child {
     margin-left: 0px;
     }
+    @include phones {
+        flex-direction:row;
+    }
 }
 .best__item-logo {
     margin:0;
     padding: 0;
+    @include phones {
+        width: 60%;
+    }
 }
 
 .best__item-title {
@@ -50,10 +76,23 @@
     font-size: rem(24px);
     text-align: center;
     margin: rem(40px) 0 0 0;
+    @include laptop770 {
+        font-size: rem(16px);
+    }
+    @include phones {
+        margin-top: 10px;
+        display: flex;
+    }
 }
 .best__item-description {
     font-family: 'Ubuntu';
     font-size: rem(14px);
     text-align: center;
     margin: rem(20px) 0 0 0;
+    @include laptop770 {
+        font-size: rem(10px);
+    }
+    @include phones {
+        margin-top: 10px;
+    }
 }
