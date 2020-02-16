@@ -13,9 +13,16 @@
     margin-left: auto;
     background-color: rgba(#2f3233, 0.93);
     color: white;
-    padding-left:50px;
-    padding-top: 100px;
-    padding-right: 20px;
+    padding: 100px 20px 0 50px;
+    @include laptop770 {
+        width: 100%;
+        padding: 0;
+        margin-left: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .crew__accordeon-title {
@@ -24,6 +31,9 @@
     color: $yellow;
     font-family: 'Gagalin';
     line-height: 1.42;
+    @include laptop770 {
+        font-size: 50px;
+    }
 }
 
 .crew__accordeon-hidden {
@@ -32,6 +42,10 @@
     overflow: hidden;
     display: flex;
     justify-content: space-between;
+    @include laptop770 {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .crew__accordeon-itemname {
@@ -39,6 +53,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @include laptop770 {
+        justify-content: center;
+    }
 }
 .crew__accordeon-item {
     margin-bottom: 35px;
@@ -56,11 +73,17 @@
         transform: scale(1, -1);
         transition:0.5s ;
     }
+    @include laptop770 {
+        margin-bottom: 20px;
+    }
 }
 .crew__accordeon-wrimg{
     width: 80px;
     height: 80px;
     margin-right: 15px;
+    @include laptop770 {
+        margin: 0;
+    }
 }
 
 .crew__accordeon-hidden-img {
@@ -76,12 +99,19 @@
 .crew__accordeon-name {
     font-family: 'Gagalin';
     font-size: 14px;
-    
+    @include laptop770 {
+        font-size: 24px;
+    }
 }
 .crew__accordeon-hidden-txtblock {
     width: calc(100% - 95px);
     line-height: 1.42;
     font-family: 'Ubuntu';
+    @include laptop770 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .crew__accordeon-hidden-title {
@@ -91,4 +121,7 @@
 
 .crew__accordeon-hidden-description {
     font-weight: 300;
+    @include laptop770 {
+        text-align: center;
+    }
 }

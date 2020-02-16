@@ -565,9 +565,28 @@ ul {
   margin-left: auto;
   background-color: rgba(47, 50, 51, 0.93);
   color: white;
-  padding-left: 50px;
-  padding-top: 100px;
-  padding-right: 20px;
+  padding: 100px 20px 0 50px;
+}
+
+@media screen and (max-width: 770px) {
+  .crew__accordeon {
+    width: 100%;
+    padding: 0;
+    margin-left: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .crew__accordeon-title {
@@ -576,6 +595,12 @@ ul {
   color: #f8b43a;
   font-family: 'Gagalin';
   line-height: 1.42;
+}
+
+@media screen and (max-width: 770px) {
+  .crew__accordeon-title {
+    font-size: 50px;
+  }
 }
 
 .crew__accordeon-hidden {
@@ -590,6 +615,18 @@ ul {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 770px) {
+  .crew__accordeon-hidden {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .crew__accordeon-itemname {
   width: 100%;
   display: -webkit-box;
@@ -601,6 +638,14 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 770px) {
+  .crew__accordeon-itemname {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .crew__accordeon-item {
@@ -628,10 +673,22 @@ ul {
   transition: 0.5s;
 }
 
+@media screen and (max-width: 770px) {
+  .crew__accordeon-item {
+    margin-bottom: 20px;
+  }
+}
+
 .crew__accordeon-wrimg {
   width: 80px;
   height: 80px;
   margin-right: 15px;
+}
+
+@media screen and (max-width: 770px) {
+  .crew__accordeon-wrimg {
+    margin: 0;
+  }
 }
 
 .crew__accordeon-hidden-img {
@@ -650,10 +707,31 @@ ul {
   font-size: 14px;
 }
 
+@media screen and (max-width: 770px) {
+  .crew__accordeon-name {
+    font-size: 24px;
+  }
+}
+
 .crew__accordeon-hidden-txtblock {
   width: calc(100% - 95px);
   line-height: 1.42;
   font-family: 'Ubuntu';
+}
+
+@media screen and (max-width: 770px) {
+  .crew__accordeon-hidden-txtblock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .crew__accordeon-hidden-title {
@@ -663,6 +741,12 @@ ul {
 
 .crew__accordeon-hidden-description {
   font-weight: 300;
+}
+
+@media screen and (max-width: 770px) {
+  .crew__accordeon-hidden-description {
+    text-align: center;
+  }
 }
 
 .menu {
