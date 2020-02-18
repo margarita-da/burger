@@ -1,6 +1,8 @@
 .review {
-    height: 150%;
-}
+    @include laptop770 {
+        height: 200%;
+    }
+} 
 .review__list {
     width: 100%;
     height: 100%;
@@ -20,9 +22,10 @@
     &:hover {
         opacity: 1;
     }
+   
     @include laptop770 {
         width: 50%;
-        // height: 25%;
+        height: 25%;
         background-position:top;
     }
 }

@@ -13,6 +13,12 @@
     display: flex;
     padding: 0 70px 0 70px;
     bottom: 0;
+    @include phones {
+        height: 110px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .footer__left {
@@ -22,6 +28,13 @@
     width: 50%;
     font-family: 'Ubuntu';
     font-size: 14px;
+    @include phones {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
 }
 
 .footer__phone {
@@ -34,6 +47,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    @include phones {
+        justify-content: flex-start;
+    }
 }
 .footer__socials {
     width: 22px;
@@ -54,6 +70,9 @@
     color: white;
     font-weight: 300;
     margin-bottom: 5px;
+    @include phones {
+        text-wrap: nowrap;
+    }
 }
 .footer__phone-number {
     color:#e45028;
