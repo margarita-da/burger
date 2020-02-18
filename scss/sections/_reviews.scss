@@ -1,3 +1,6 @@
+.review {
+    height: 150%;
+}
 .review__list {
     width: 100%;
     height: 100%;
@@ -19,7 +22,7 @@
     }
     @include laptop770 {
         width: 50%;
-        // height: 60%;
+        // height: 25%;
         background-position:top;
     }
 }
@@ -50,9 +53,14 @@
         transition: 0.5s;
         background-color: rgba(#454545,0.5) ;
     }
+
+}
+.form__rigth-wrap{
+    display: flex;
+    flex-direction: column;
     @include laptop770 {
         align-items: center;
-    }
+}
 }
 
 .reviews__popup__h2_title {
@@ -68,7 +76,6 @@
         line-height: 1.2;
         text-align: center;
         margin-bottom: 20px;
-  
     }
 }
 .reviews__popup__descr {

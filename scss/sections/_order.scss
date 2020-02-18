@@ -1,19 +1,36 @@
 .order {
+    width: 100%;
+    height: 100%;
     background: url('../img/bg/orderbg.jpg') center center no-repeat;
     background-size: cover;
     color: #ffffff;
+    @include laptop {
+        background-image: url('../img/bg/orderlaptopbg.jpg');
+    }
+    @include phones {
+        background-image: url('../img/bg/ordermobilebg.jpg');
+    }
 }
 
 .order__title {
     margin: 50px 0 20px 0;
+    @include laptop {
+        margin: 40px 0 10px 0;
+    }    
 }
 
 .form {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     font-size: 14px;
     font-family: 'Ubuntu';
     font-weight: 300;
+    @include desktop1050 {
+        flex-direction:column;
+        align-self: center;
+    }    
 }
 
 
@@ -26,10 +43,17 @@
     flex:1;
     display: flex;
     flex-direction: column;
+    margin: 0 10px;
+    @include phones {
+        align-self: center;
+        &:first-child {
+            align-items: flex-start;
+        }
+    }
 }
 .form__left{
     flex:1;
-    margin-right: 20px;
+    margin: 0 10px;
 }
 
 .form__block {
@@ -56,6 +80,7 @@
 }
 
 .form__right-row {
+    width: 100%;
     display: flex;
     margin-bottom: 15px;
     // justify-content: flex-start;
