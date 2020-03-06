@@ -1,0 +1,207 @@
+.food-menu {
+    width: 100%;
+    height: 100%;
+    background: #f9b43b;
+    background: linear-gradient(to top, #f9b43b 30% ,#ec8f38 50%, #f9b43b 70%);
+    @include laptop770 {
+        height: auto;
+        padding: 100px 0;
+    }
+}
+
+.food-menu__wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // @include laptop770 {
+    //     padding: 30px 0;
+    // }
+}
+
+.food-menu__arrowscroll-left {
+    width: 15%;
+    text-align: right;
+    margin-right: 10px;
+    @include laptop770 {
+        width: 10%;
+    }
+}
+.arrowscroll-left__img {
+    transform: scale(-1, 1);
+}
+
+.food-menu__content {
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include desktop1050 {
+    height: auto;
+    }
+    @include laptop770 {
+        width: 80%;
+        height: 100%;
+        flex-direction: column;
+      padding: 30px 0;
+    }
+}
+
+.food-menu__arrowscroll-righ {
+    width: 15%;
+    margin-left: 10px;
+    @include laptop770 {
+        width: 10%;
+    }
+}
+
+.arrowscroll-right__img {
+    transform: scale(1, -1);
+}
+
+.food-menu__leftcontent {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-right: 10px;
+    position: relative;
+    @include laptop770 {
+        width: 100%;
+        flex-grow: 1;
+        flex-direction: row;
+        margin-right: 0;
+    }
+}
+.food-menu__wrap-pic{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    @include laptop770 {
+        flex-direction: row;
+        bottom: 250px;
+    }
+    @include phones {
+        bottom: 200px;
+    }
+}
+
+.food-menu__composition{
+    margin-bottom: 250px;
+    width: 100%;
+    @include laptop770 {
+        width: 80px;
+        margin: 0 300px 0 10px;
+    }
+    @include phones {
+        margin: 0 250px 0 10px;
+    }
+}
+
+.food-menu__kkal {
+    width: 100%;
+    @include laptop770 {
+        width: 80px;
+    }
+}
+
+.food-menu__black-burger{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include laptop770 {
+        width: 430px;
+    }
+
+    @include phones {
+        width: 340px;
+    }
+}
+
+.food-menu__img-bburger {
+    width: 100%;
+    height: 100%;
+    
+}
+
+// .food-menu__composition .food-menu__kkal{
+//     position: absolute;
+//     @include laptop770 {
+//     }
+// }
+
+
+.food-menu__rightcontent {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @include laptop770 {
+        width: 100%;
+        flex-grow: 1;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.food-menu__title {
+    width: 100%;
+    height: auto;
+    color: white;
+    line-height: 1;
+    margin-bottom: 30px;
+    padding: 0;
+    @include laptop770 {
+        margin: 20px 0 20px 0;
+        text-wrap: wrap;
+    }
+}
+
+.food-menu__description {
+    width: 100%;
+    height: auto;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+
+}
+
+.food-menu__order {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    @include laptop770 {
+        justify-content: center;
+    }
+}
+
+.food-menu__order-price{
+    color:#e35028;
+    margin-right: 10px ;
+    padding: 0;
+    line-height: 0.8;
+}
+
+.food-menu__order-rub {
+    color:#e35028;
+    margin-right: 35px ;
+    padding: 0;
+    font-size: 30px;
+    line-height: 1;
+    @include desktop1050 {
+        font-size: 20px !important;
+    }
+}
+
+
+
