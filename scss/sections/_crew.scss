@@ -57,26 +57,33 @@
         justify-content: center;
     }
 }
+
+
 .crew__accordeon-item {
     margin-bottom: 35px;
     cursor: pointer;
-    &:active .crew__accordeon-hidden {
-    overflow: visible;
-    height: auto;
-    transition: 0.5s;
-    }
-    &:active .crew__accordeon-name {
-        color: $yellow;
-        transition: 0.5s;
-    }
-    &:active .crew__accordeon-svg {
-        transform: scale(1, -1);
-        transition:0.5s ;
-    }
+
     @include laptop770 {
         margin-bottom: 20px;
     }
 }
+
+.crew__accordeon-item__active {
+    .crew__accordeon-hidden {
+        overflow: visible;
+        height: auto;
+        transition: 0.5s;
+        }
+    .crew__accordeon-name {
+        color: $yellow;
+        transition: 0.5s;
+        }
+    .crew__accordeon-svg {
+        transform: scale(1, -1);
+        transition:0.5s ;
+        }
+}
+
 .crew__accordeon-wrimg{
     width: 80px;
     height: 80px;

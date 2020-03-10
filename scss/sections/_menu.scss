@@ -6,6 +6,7 @@
     background-position: 50%;
     background-size: cover;
     display: flex;
+    // position: relative;
   }
 
   .section__menu-title {
@@ -15,8 +16,13 @@
     @include laptop770 {
       margin: 90px 0 0 20px;
     }
-    
   }
+
+  .section__menu-title__none {
+    @include laptop770 {
+      display: none;
+  }
+}
 
   .menu__accordeon {
     width: auto;
@@ -32,16 +38,7 @@
     display: flex;
     margin-left: auto;
     cursor: pointer;
-    &:active .menu__accordeon-hidden {
-        overflow: visible;
-        height: 100%;
-        width: 540px;
-        transition: 0.5s;
-    }
-    &:active .section__menu-accordeontitle {
-        color: $yellow;
-        transition: 0.5s;
-    }
+    
     
   }
 
@@ -51,6 +48,21 @@
     background-color: rgba(#2e3133, 0.9);
  
   }
+
+.menu__accordeon-hidden__active {
+  .menu__accordeon-hidden {
+    overflow: visible;
+    height: 100%;
+    width: 540px;
+    transition: 0.5s;
+}
+  .section__menu-accordeontitle {
+    color: $yellow;
+    transition: 0.5s;
+}
+
+}
+
   .menu__accordeon-hiddentxt {
     color:white;
     font-size: 14px;

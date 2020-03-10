@@ -1,98 +1,74 @@
-// var name='Маргарита';
-// console.log(name);
-// name='Женя';
-// console.log(name);
 
-// if (name=='Маргарита') {
-//     console.log(name);
-// } else if (name=='Женя') {
-//     console.log('а');
-// }
-// else {
-//     console.log(false);
-// }
+// const items = document.querySelectorAll(".crew__accordeon-item");
 
-// for (var a=1; a<=10; a++) {
-//     console.log(a);
-// }
-
-// function sum(p1,p2,p3) {
-//  let result= p1+p2+p3;
-//  return result;
-// }
-
-// let variable=sum(10,20,30);
-// console.log(variable);
-
-// let value=sum(1,2,3);
-// console.log(value);
-
-// let array=new Array ();
-
-// let arr= [];
-
-// let ar= ['привет', 'loftschool'];
-// ar.push('я изучаю', 'javascript');
-// console.log(ar.length);
-// for (let i=0; i<ar.length;i++) {
-//     console.log(ar[i]);
-// }
-
-// let map= [10,20,30,40,50,190,140,400,9,6000];
-// for (let i=0; i<map.length; i++) {
-//     if (map[i]>100) {
-//         console.log (map[i]);
-//     }
-// }
-
-// let obj= {
-//     name:'Маргарита',
-//     lastName:'Дорохова',
-//     age:'29'
-// }
-// console.log(obj.name);
-// console.log(obj.lastName);
-// console.log(obj.age);
-
-// function hello(human) {
-// //    return 'Привет, меня зовут '+ human.name +' ' + human.lastName + ' и мне ' +human.age +' лет!';
-//     return `Привет, меня зовут ${human.name} ${human.lastName} и мне ${human.age} лет!`
-// }
-   
-// let res=hello(obj);
-// console.log(res);
-// const openButton = document.querySelector('#openOverlay');
-
-// function openOverlay(contentop) {
-
-//     const overlayElement = document.createElement('div');
-//     overlayElement.classList.add('overlay');
-
-//     const containerElement = document.createElement('div');
-//     overlayElement.classList.add('containerop');
-
-//     const contentElement = document.createElement('div');
-//     overlayElement.classList.add('contentop');
-//     contentElement.textContent = contentop;
-
-//     const closeElement = document.createElement('a');
-//     closeElement.classList.add('close');
-//     closeElement.textContent = 'x';
-//     closeElement.href = '#'
-//     closeElement.addEventListener('click', function(e) {
-//         e.preventDefault();
-//         document.body.removeChild(overlayElement);
+// for (let i=0; i<items.length; i++) {
+//     items[i].addEventListener('click', function(e) {
+//         let target = getCurrentZone(e.target);
+//         console.log(items[i]);
+//         if (items[i].classList.contains('crew__accordeon-item__active')) {
+//             items[i].classList.remove('crew__accordeon-item__active');
+//          };
+       
+//         target.classList.add('crew__accordeon-item__active');
+        
 //     });
+// };
 
-//     overlayElement.appendChild(containerElement);
-//     containerElement.appendChild(closeElement);
-//     containerElement.appendChild(contentElement);
+const list = document.querySelector('.crew__accordeon-list');
+const items = document.querySelectorAll(".crew__accordeon-item");
 
-//     return overlayElement;
-// }
+list.addEventListener('click', function(e){
+    const target = getCurrentZone(e.target, 'crew__accordeon-item');
+    for (let i=0; i<items.length; i++) { 
+        if (items[i].classList.contains('crew__accordeon-item__active') &&  !target.classList.contains('crew__accordeon-item__active')) {
+            items[i].classList.remove('crew__accordeon-item__active');
+        }        
+    }
+    if (target.classList.contains('crew__accordeon-item')) {
+        target.classList.toggle('crew__accordeon-item__active');
+    }
+    
+});
 
-// openButton.addEventListener('click', function(){
-//    const overlay = openOverlay('Привет,Рита');
-//     document.body.appendChild(overlay);
-// });
-const lists = document.querySelector("crew__accordeon-item");
+
+const main = document.querySelector(".menu__accordeon");
+const childs = document.querySelectorAll(".menu__accordeon-list");
+
+main.addEventListener('click', function(event){
+    const target = getCurrentZone(event.target, 'menu__accordeon-list');
+    const title = document.querySelector(".section__menu-title");
+    let inProcess;
+    for (let i=0; i<childs.length; i++) { 
+        if (childs[i].classList.contains('menu__accordeon-hidden__active') &&  !target.classList.contains('menu__accordeon-hidden__active')) {
+            childs[i].classList.remove('menu__accordeon-hidden__active');
+        }  
+        if (childs[i].classList.contains('menu__accordeon-hidden__active')){
+            inProcess = 1;
+        } 
+       
+    }
+    if (target.classList.contains('menu__accordeon-list')) {
+        target.classList.toggle('menu__accordeon-hidden__active');
+    }
+
+    if (inProcess == 1){
+        title.classList.remove('section__menu-title__none');
+    } else {
+        title.classList.add('section__menu-title__none');
+    }
+
+});
+
+function getCurrentZone(from, to) {
+    do {
+        if (from.classList.contains(to)) {
+            return from;
+        }
+    } while (from = from.parentElement);
+
+    return null;
+}
+
+
+
+
