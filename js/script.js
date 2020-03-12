@@ -67,8 +67,50 @@ function getCurrentZone(from, to) {
     } while (from = from.parentElement);
 
     return null;
+};
+
+
+const openbutton = document.querySelector('#openoverlay');
+
+function openOverlay (content) {
+    const overlayElement= document.createElement('div');
+    overlayElement.classList.add('overlay');
+
+    const containerElement= document.createElement('div');
+    containerElement.classList.add('containers');
+
+    const titleElement= document.createElement('div');
+    titleElement.classList.add('titleover');
+    titleElement.textContent= "Константин Спилберг";
+
+   
+    const contentElement= document.createElement('div');
+    contentElement.classList.add('content');
+    contentElement.textContent=content;
+
+
+    const closeElement= document.createElement('a');
+    closeElement.classList.add('close');
+    closeElement.href = '#review';
+    closeElement.textContent = 'x';
+    closeElement.addEventListener('click', function(){
+        document.body.removeChild(overlayElement);
+    });
+    
+    overlayElement.appendChild(containerElement);
+    containerElement.appendChild(closeElement);
+    containerElement.appendChild(titleElement);
+    containerElement.appendChild(contentElement);
+
+    
+    return overlayElement;
 }
 
+openbutton.addEventListener('click', function(){
+    const overlay = openOverlay('Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.');
 
+    document.body.appendChild(overlay);
+
+});
 
 
