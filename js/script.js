@@ -70,9 +70,25 @@ function getCurrentZone(from, to) {
 };
 
 
-const openbutton = document.querySelector('#openoverlay');
+//всплывающее окно в отзывах
 
-function openOverlay (content) {
+const openbutton = document.querySelectorAll('.reviews__popup__link');
+
+
+function getText (attr) {
+
+    const reviewItem = document.getElementById(attr);
+    const h2title = reviewItem.querySelector('.reviews__popup__h2_title');
+    const contenttitle = h2title.textContent;
+    const descrRev = reviewItem.querySelector('.reviews__popup__descr');
+    const contendescr = descrRev.textContent;
+    return {
+        title:contenttitle,
+        descr:contendescr
+    }
+};
+
+function openOverlay (obj) {
     const overlayElement= document.createElement('div');
     overlayElement.classList.add('overlay');
 
@@ -81,12 +97,13 @@ function openOverlay (content) {
 
     const titleElement= document.createElement('div');
     titleElement.classList.add('titleover');
-    titleElement.textContent= "Константин Спилберг";
+    titleElement.textContent= obj.title;
+    
 
    
     const contentElement= document.createElement('div');
     contentElement.classList.add('content');
-    contentElement.textContent=content;
+    contentElement.textContent=obj.descr;
 
 
     const closeElement= document.createElement('a');
@@ -105,12 +122,23 @@ function openOverlay (content) {
     
     return overlayElement;
 }
+let overlay;
+for (let i=0; i<openbutton.length; i++) {
+openbutton[i].addEventListener('click', function(){
 
-openbutton.addEventListener('click', function(){
-    const overlay = openOverlay('Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.');
+    const att = openbutton[i].dataset.attr;
+    const result = getText (att);
+    overlay = openOverlay(result);
 
     document.body.appendChild(overlay);
-
 });
 
+};
+
+//слайдер
+
+$('.food-menu__wrap').slick({
+    prevArrow: '<div class="food-menu__arrowscroll-left"> <img class="arrowscroll-left__img" src="/img/content/arrowscroll.png" alt="arrowscroll"></div>',
+    nextArrow: '<div class="food-menu__arrowscroll-righ"><img class="arrowscroll-right__img" src="/img/content/arrowscroll.png" alt="arrowscroll"></div>'
+});
 

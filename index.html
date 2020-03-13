@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/normalize.css">
 </head>
@@ -89,9 +90,9 @@
 
             <section class="section food-menu" id="food-menu">
                 <div class="food-menu__wrap">
-                    <div class="food-menu__arrowscroll-left">
+                    <!-- <div class="food-menu__arrowscroll-left">
                         <img class="arrowscroll-left__img" src="/img/content/arrowscroll.png" alt="arrowscroll">
-                    </div>
+                    </div> -->
                     <div class="food-menu__content">
                         <div class="food-menu__leftcontent">
                             <div class="food-menu__wrap-pic">
@@ -128,9 +129,45 @@
                             </div>
                         </div>
                     </div>
-                    <div class="food-menu__arrowscroll-righ">
-                        <img class="arrowscroll-right__img" src="/img/content/arrowscroll.png" alt="arrowscroll">
+                    <div class="food-menu__content">
+                        <div class="food-menu__leftcontent">
+                            <div class="food-menu__wrap-pic">
+                                <div class="food-menu__composition">
+                                    <img class="food-menu__img-composition" src="/img/content/composition.png" alt="">
+                                </div>
+                                <div class="food-menu__kkal">
+                                    <img src="/img/content/kkal.png" alt="" class="food-menu__img-kkal">
+                                </div>
+                            </div>
+                        
+                            <div class="food-menu__black-burger">
+                                <img class="food-menu__img-bburger" src="/img/content/blackburger.png" alt="">
+                            </div>    
+                            
+                        </div>
+                        <div class="food-menu__rightcontent">
+                            <h2 class="section__title food-menu__title"> 
+                                Dark beef burger
+                            </h2>
+                            <div class="food-menu__description">
+                                Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                            </div>
+                            <div class="food-menu__order">
+                                <h3 class="section__title food-menu__order-price">
+                                    600 
+                                </h3>
+                                <div class="section__title food-menu__order-rub">
+                                    рублей
+                                </div>
+                                <div class="food-menu__order-button">
+                                    <a href="" class="order-link">Заказать</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- <div class="food-menu__arrowscroll-righ">
+                        <img class="arrowscroll-right__img" src="/img/content/arrowscroll.png" alt="arrowscroll">
+                    </div> -->
                 </div>
             </section>
 
@@ -267,31 +304,31 @@
 
              <section class="section review" id="review">
                 <ul class="review__list">
-                    <li class="review__item" style="background-image: url('./img/content/reviews1.png');">
+                    <li class="review__item" id="openoverlay1" style="background-image: url('./img/content/reviews1.png');">
                         <div class="reviews__popup">
-                            <h2 class="reviews__popup__h2_title">Константин Спилберг</h2>
+                            <h2 class="reviews__popup__h2_title">Константин Спилберг1</h2>
                             <div class="reviews__popup__descr">
-                                Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                1Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                             </div>
                             <div class="reviews__popup__wr-link">
-                                <a href="#review" class="order-link reviews__popup__link" id="openoverlay">Подробнее</a>
+                                <a href="#review" class="order-link reviews__popup__link" data-attr="openoverlay1">Подробнее</a>
                             </div>
                         </div>
                     </li>
-                    <li class="review__item" style="background-image: url('./img/content/reviews2.png');">
+                    <li class="review__item" id="openoverlay2" style="background-image: url('./img/content/reviews2.png');">
                         <div class="reviews__popup">
-                            <h2 class="reviews__popup__h2_title">Константин Спилберг</h2>
+                            <h2 class="reviews__popup__h2_title">Константин Спилберг2</h2>
                             <div class="reviews__popup__descr">
-                                Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                2Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                             </div>
                             <div class="reviews__popup__wr-link">
-                                <a href="#review" class="order-link reviews__popup__link" id="openoverlay">Подробнее</a>
+                                <a href="#review" class="order-link reviews__popup__link" data-attr="openoverlay2">Подробнее</a>
                             </div>
                         </div>
                     </li>
-                    <li class="review__item" style="background-image: url('./img/content/reviews3.png');">
+                    <li class="review__item" id="openoverlay3" style="background-image: url('./img/content/reviews3.png');">
                         <div class="reviews__popup">
                             <h2 class="reviews__popup__h2_title">Константин Спилберг</h2>
                             <div class="reviews__popup__descr">
@@ -299,35 +336,35 @@
                                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                             </div>
                             <div class="reviews__popup__wr-link">
-                                <a href="#review" class="order-link reviews__popup__link" id="openoverlay">Подробнее</a>
+                                <a href="#review" class="order-link reviews__popup__link" data-attr="openoverlay3">Подробнее</a>
                             </div>
                         </div>
                     </li>
-                    <li class="review__item" style="background-image: url('./img/content/reviews4.png');">
+                    <li class="review__item" id="openoverlay4" style="background-image: url('./img/content/reviews4.png');">
                         <div class="reviews__popup">
-                            <h2 class="reviews__popup__h2_title">Константин Спилберг</h2>
+                            <h2 class="reviews__popup__h2_title">Константин Спилберг3</h2>
                             <div class="reviews__popup__descr">
-                                Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                3Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                             </div>
                             <div class="reviews__popup__wr-link">
-                                <a href="#review" class="order-link reviews__popup__link" id="openoverlay">Подробнее</a>
+                                <a href="#review" class="order-link reviews__popup__link" data-attr="openoverlay4">Подробнее</a>
                             </div>
                         </div>
                     </li>
-                    <li class="review__item" style="background-image: url('./img/content/reviews5.png');">
+                    <li class="review__item" id="openoverlay5" style="background-image: url('./img/content/reviews5.png');">
                         <div class="reviews__popup">
-                            <h2 class="reviews__popup__h2_title">Константин Спилберг</h2>
+                            <h2 class="reviews__popup__h2_title">Константин Спилберг4</h2>
                             <div class="reviews__popup__descr">
-                                Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                4Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                             </div>
                             <div class="reviews__popup__wr-link">
-                                <a href="#review" class="order-link reviews__popup__link" id="openoverlay">Подробнее</a>
+                                <a href="#review" class="order-link reviews__popup__link" data-attr="openoverlay5">Подробнее</a>
                             </div>
                         </div>
                     </li>
-                    <li class="review__item" style="background-image: url('./img/content/reviews6.png');">
+                    <li class="review__item" id="openoverlay6" style="background-image: url('./img/content/reviews6.png');">
                         <div class="reviews__popup">
                             <h2 class="reviews__popup__h2_title">Константин Спилберг</h2>
                             <div class="reviews__popup__descr">
@@ -335,11 +372,11 @@
                                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                             </div>
                             <div class="reviews__popup__wr-link">
-                                <a href="#review" class="order-link reviews__popup__link" id="openoverlay">Подробнее</a>
+                                <a href="#review" class="order-link reviews__popup__link" data-attr="openoverlay6">Подробнее</a>
                             </div>
                         </div>
                     </li>
-                    <li class="review__item" style="background-image: url('./img/content/reviews7.png');">
+                    <li class="review__item" id="openoverlay7" style="background-image: url('./img/content/reviews7.png');">
                         <div class="reviews__popup">
                             <h2 class="reviews__popup__h2_title">Константин Спилберг</h2>
                             <div class="reviews__popup__descr">
@@ -347,11 +384,11 @@
                                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                             </div>
                             <div class="reviews__popup__wr-link">
-                                <a href="#review" class="order-link reviews__popup__link" id="openoverlay">Подробнее</a>
+                                <a href="#review" class="order-link reviews__popup__link" data-attr="openoverlay7">Подробнее</a>
                             </div>
                         </div>
                     </li>
-                    <li class="review__item" style="background-image: url('./img/content/reviews8.png');">
+                    <li class="review__item" id="openoverlay8" style="background-image: url('./img/content/reviews8.png');">
                         <div class="reviews__popup">
                             <h2 class="reviews__popup__h2_title">Константин Спилберг</h2>
                             <div class="reviews__popup__descr">
@@ -359,7 +396,7 @@
                                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                             </div>
                             <div class="reviews__popup__wr-link">
-                                <a href="#review" class="order-link reviews__popup__link" id="openoverlay">Подробнее</a>
+                                <a href="#review" class="order-link reviews__popup__link" data-attr="openoverlay8">Подробнее</a>
                             </div>
                         </div>
                     </li>
@@ -515,7 +552,8 @@
     </ul>
 
   
-
-<script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html> 

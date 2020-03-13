@@ -1425,6 +1425,12 @@ ul {
   }
 }
 
+.slick-initialized .slick-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .food-menu__wrap {
   width: 100%;
   height: 100%;
@@ -1440,6 +1446,7 @@ ul {
 }
 
 .food-menu__arrowscroll-left {
+  cursor: pointer;
   width: 15%;
   text-align: right;
   margin-right: 10px;
@@ -1448,6 +1455,8 @@ ul {
 @media screen and (max-width: 770px) {
   .food-menu__arrowscroll-left {
     width: 10%;
+    margin-left: 10px;
+    margin-right: 0;
   }
 }
 
@@ -1473,6 +1482,8 @@ ul {
 @media screen and (max-width: 1050px) {
   .food-menu__content {
     height: auto;
+    left: 0;
+    margin: 50px 0 50px 0;
   }
 }
 
@@ -1489,6 +1500,7 @@ ul {
 }
 
 .food-menu__arrowscroll-righ {
+  cursor: pointer;
   width: 15%;
   margin-left: 10px;
 }
@@ -1496,6 +1508,8 @@ ul {
 @media screen and (max-width: 770px) {
   .food-menu__arrowscroll-righ {
     width: 10%;
+    margin-left: 0;
+    margin-right: 10px;
   }
 }
 
@@ -1555,13 +1569,13 @@ ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    bottom: 250px;
+    bottom: 300px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .food-menu__wrap-pic {
-    bottom: 200px;
+    bottom: 250px;
   }
 }
 
@@ -1573,13 +1587,13 @@ ul {
 @media screen and (max-width: 770px) {
   .food-menu__composition {
     width: 80px;
-    margin: 0 300px 0 10px;
+    margin: 0 380px 0 10px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .food-menu__composition {
-    margin: 0 250px 0 10px;
+    margin: 0 200px 0 10px;
   }
 }
 
@@ -1602,6 +1616,7 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 30px 0;
 }
 
 @media screen and (max-width: 770px) {

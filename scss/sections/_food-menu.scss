@@ -9,6 +9,9 @@
     }
 }
 
+.slick-initialized .slick-slide {
+    display: flex;
+}
 .food-menu__wrap {
     width: 100%;
     height: 100%;
@@ -20,12 +23,17 @@
     // }
 }
 
+
+
 .food-menu__arrowscroll-left {
+    cursor: pointer;
     width: 15%;
     text-align: right;
     margin-right: 10px;
     @include laptop770 {
         width: 10%;
+        margin-left: 10px;
+        margin-right: 0;
     }
 }
 .arrowscroll-left__img {
@@ -40,6 +48,8 @@
     align-items: center;
     @include desktop1050 {
     height: auto;
+    left:0;
+    margin: 50px 0 50px 0;
     }
     @include laptop770 {
         width: 80%;
@@ -50,10 +60,13 @@
 }
 
 .food-menu__arrowscroll-righ {
+    cursor: pointer;
     width: 15%;
     margin-left: 10px;
     @include laptop770 {
         width: 10%;
+        margin-left: 0;
+        margin-right: 10px;
     }
 }
 
@@ -69,6 +82,7 @@
     justify-content: center;
     align-items: start;
     margin-right: 10px;
+    // margin: 30px 10px 30px;
     position: relative;
     @include laptop770 {
         width: 100%;
@@ -83,10 +97,10 @@
     flex-direction: column;
     @include laptop770 {
         flex-direction: row;
-        bottom: 250px;
+        bottom: 300px;
     }
     @include phones {
-        bottom: 200px;
+        bottom: 250px;
     }
 }
 
@@ -95,10 +109,10 @@
     width: 100%;
     @include laptop770 {
         width: 80px;
-        margin: 0 300px 0 10px;
+        margin: 0 380px 0 10px;
     }
     @include phones {
-        margin: 0 250px 0 10px;
+        margin: 0 200px 0 10px;
     }
 }
 
@@ -114,6 +128,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 30px 0;
     @include laptop770 {
         width: 430px;
     }
